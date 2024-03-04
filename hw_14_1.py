@@ -79,14 +79,14 @@ st9 = Student('Male', 41, 'Yoshihiro', 'Fukuyama', 'AN145')
 st10 = Student('Female', 19, 'Billie', 'Eilish', 'AN145')
 st11 = Student('Male', 26, 'Max', 'Verstappen', 'AN145')
 
-list_students = (st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11)
+tuple_students = (st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11)
 
 gr = Group('PD1')
 
 
 try:
-    for i in range(len(list_students)):
-        gr.add_student(list_students[i])
+    for i in range(len(tuple_students)):
+        gr.add_student(tuple_students[i])
 except UserException:
     print('A group cannot have more than 10 students')
 finally:

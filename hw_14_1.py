@@ -67,7 +67,6 @@ class Group:
 
         return f'Number:{self.number}\n{all_students}\n'
 
-
 st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
 st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
 st3 = Student('Male', 29, 'Guido', 'van Rossum', 'AN146')
@@ -80,21 +79,14 @@ st9 = Student('Male', 41, 'Yoshihiro', 'Fukuyama', 'AN145')
 st10 = Student('Female', 19, 'Billie', 'Eilish', 'AN145')
 st11 = Student('Male', 26, 'Max', 'Verstappen', 'AN145')
 
+list_students = (st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11)
+
 gr = Group('PD1')
 
-gr.add_student(st1)
-gr.add_student(st2)
-gr.add_student(st3)
-gr.add_student(st4)
-gr.add_student(st5)
-gr.add_student(st6)
-gr.add_student(st7)
-gr.add_student(st8)
-gr.add_student(st9)
-gr.add_student(st10)
 
 try:
-    gr.add_student(st11)
+    for i in range(len(list_students)):
+        gr.add_student(list_students[i])
 except UserException:
     print('A group cannot have more than 10 students')
 finally:
